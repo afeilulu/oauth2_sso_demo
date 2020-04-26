@@ -1,0 +1,28 @@
+version: "3"
+services:
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - /home/dev/db-docker-dev/redis:/data
+    entrypoint: redis-server --requirepass 123456
+
+  mariadb:
+    container_name: mariadb
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=soc
+      - MYSQL_USER=dev
+      - MYSQL_PASSWORD=devpassword
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+# on linux
+      - /home/dev/db-docker-dev/mysql:/var/lib/mysql
+# on windows
+#      - mariadb:/var/lib/mysql
+    ports:
+      - 3306:3306
