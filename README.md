@@ -3,11 +3,11 @@ Inspired by this article https://www.cnblogs.com/cjsblog/p/10548022.html
 
 Three projects for demostration
 - oauthserver :
-    run on 8080
+    run on soc.wenet.com.cn:8080
 - oauthclient :
-    run on 8082
+    run on soc.wenet.com.cn:8082
 - itsm:
-    another client run on 8083
+    another client run on itsm.wenet.com.cn:8083
 
 ## Dns configuration
 If you want to try on your localmachine, edit hosts file.
