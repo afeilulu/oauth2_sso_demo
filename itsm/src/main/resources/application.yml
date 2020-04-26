@@ -1,0 +1,16 @@
+
+server:
+  port: 8083
+spring:
+  thymeleaf:
+    cache: false
+security:
+  oauth2:
+    client:
+      client-id: itsm
+      client-secret: user123
+      access-token-uri: http://soc.wenet.com.cn:8080/oauth/token
+      user-authorization-uri: http://soc.wenet.com.cn:8080/oauth/authorize
+    resource:
+      jwt:
+        key-uri: http://soc.wenet.com.cn:8080/oauth/token_key
